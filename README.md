@@ -1,7 +1,3 @@
-*******************Created By Team 17*******************************************
-This will contaion the final Version of second year group project
-
-
 # Groupproject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
