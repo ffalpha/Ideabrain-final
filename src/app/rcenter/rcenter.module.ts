@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RcenterRoutingModule } from './rcenter-routing.module';
+import { RccenterhomeComponent } from './rccenterhome/rccenterhome.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [RccenterhomeComponent],
   imports: [
     CommonModule,
     RcenterRoutingModule
