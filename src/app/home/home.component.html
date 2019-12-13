@@ -1,82 +1,127 @@
-<!-- SideNav slide-out button -->
-<a (click)="sidenav.toggle()" mdbBtn color="primary" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a>
-<!--/. SideNav slide-out button -->
-
-<!-- Sidebar navigation -->
-<mdb-side-nav #sidenav class="fixed" [fixed]="true">
-  <!-- Logo -->
-  <li>
-    <div class="logo-wrapper waves-light">
-      <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+<!-- Header Part -->
+<div class="navigation">
+  <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
+  <label for="navi-toggle" class="navigation_button"></label>
+  <div class="navigation_background">&nbsp;</div>
+  <nav class="navigation_nav ">
+    <ul class="navigation_list">
+        <li class="navigation_item"><a href="http://localhost:4200/" class="navigation_link">Home</a></li>
+      <li class="navigation_item"><a href="" class="navigation_link">About Ideabrain</a></li>
+      <li class="navigation_item"><a href="http://localhost:4201/" class="navigation_link">Login</a></li>
+      <li class="navigation_item"><a href="" class="navigation_link">Forum</a></li>
+     
+    </ul>
+  </nav>
+</div>
+<body>
+  <header class="header">
+    <div class="logo-box">
+      <img src="../../assets/logo.png" alt="Logo" class="logo" />
     </div>
-  </li>
-  <!--/. Logo -->
-  <!--Social-->
-  <li>
-    <ul class="social">
-      <li><a class="icons-sm fb-ic"><mdb-icon fab icon="facebook-f"> </mdb-icon></a></li>
-      <li><a class="icons-sm pin-ic"><mdb-icon fab icon="pinterest"> </mdb-icon></a></li>
-      <li><a class="icons-sm gplus-ic"><mdb-icon fab icon="google-plus"> </mdb-icon></a></li>
-      <li><a class="icons-sm tw-ic"><mdb-icon fab icon="twitter"> </mdb-icon></a></li>
-    </ul>
-  </li>
-  <!--/Social-->
-  <!--Search Form-->
-  <li>
-    <form class="search-form" role="search">
-      <div class="form-group md-form waves-light" mdbWavesEffect>
-        <input type="text" class="form-control" placeholder="Search">
+    <div class="text-box">
+      <h1 class="heading-primary">
+        <span class="heading-primary-main">Ideabrain</span>
+        <span class="heading-primary-sub">Where New inevetors</span>
+      </h1>
+      <a href="#" class="btn btn-white btn-animated">Discover More</a>
+    </div>
+  </header>
+  <main>
+    <section class="section-about">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          What Is Ideabrain
+        </h2>
       </div>
-    </form>
-  </li>
-  <!--/.Search Form-->
-  <!-- Side navigation links -->
-  <li>
-    <ul class="collapsible collapsible-accordion">
-      <mdb-accordion [multiple]="false" aria-multiselectable="false">
+      <div class="row">
+        <div class="col-1-of-2 ">
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Why you should use it
+          </h3>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            aperiam voluptas quo similique numquam consectetur. Placeat officia
+            perferendis voluptatum a quae, porro quidem facere asperiores culpa
+            non temporibus. Atque, modi?
+          </p>
+          <h3 class="heading-tertiary  u-margin-bottom-small">
+            What will you get
+          </h3>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            aperiam voluptas quo similique numquam consectetur. Placeat officia
+            perferendis voluptatum a quae, porro quidem facere asperiores culpa
+            non temporibus. Atque, modi?
+          </p>
+          <a href="#" class="btn btn-text">Discover more &rarr;</a>
+        </div>
+        <div class="col-1-of-2">
+          <div class="composition">
+            <img
+              src="../../assets/about1.gif"
+              alt=""
+              class="composition__photo composition__photo--p1"
+            />
+            <img
+              src="../../assets/about2.gif"
+              alt=""
+              class="composition__photo composition__photo--p2"
+            />
+            <img
+              src="../../assets/nat-3-large.jpg"
+              alt=""
+              class="composition__photo composition__photo--p3"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-features">
+      <div class="row">
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <i class="feature-box-icon icon-basic-world"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small" >Find your world</h3>
+            <p class="feature-box">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+             
+            </p>
+          </div>
+        </div>
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <i class="feature-box-icon icon-basic-world"></i>
+            <h3 class="heading-tertiary u-margin-bottom-small">Find solution</h3>
+            <p class="feature-box">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+          
+            </p>
+          </div>
+        </div>
+        <div class="col-1-of-4">
+          <div class="feature-box">
+            <i class="feature-box-icon icon-basic-world"></i>
+            <h3 class="heading-tertiary">Find your world</h3>
+            <p class="feature-box">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+             
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<!-- <div class="containers">
+    <div *ngIf="afAuth.authState | async as user" class="logout">
+        <p>
+          Logged in as <strong>{{ user.email }}</strong>
+        </p>
+        <p>{{firebaseservice.currrentUserId()}}</p>
+        <button mat-stroked-button (click)="firebaseservice.signOut()">Logout</button>
+</div>
+</div>
 
-        <!-- Collapsible link -->
-        <mdb-accordion-item>
-          <mdb-accordion-item-head mdbWavesEffect><mdb-icon fas icon="chevron-right"></mdb-icon> Collapsible menu
-          </mdb-accordion-item-head>
-          <mdb-accordion-item-body>
-            <ul>
-              <li><a href="#" mdbWavesEffect>Link 1</a></li>
-              <li><a href="#" mdbWavesEffect>Link 2</a></li>
-            </ul>
-          </mdb-accordion-item-body>
-        </mdb-accordion-item>
 
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-          <mdb-accordion-item-head mdbWavesEffect><mdb-icon far icon="hand-pointer"></mdb-icon> Simple link
-          </mdb-accordion-item-head>
-          <mdb-accordion-item-body></mdb-accordion-item-body>
-        </mdb-accordion-item>
-
-        <!-- Collapsible link -->
-        <mdb-accordion-item>
-          <mdb-accordion-item-head mdbWavesEffect><mdb-icon far icon="eye"></mdb-icon> Collapsible menu 2
-          </mdb-accordion-item-head>
-          <mdb-accordion-item-body>
-            <ul>
-              <li><a href="#" mdbWavesEffect>Link 1</a></li>
-              <li><a href="#" mdbWavesEffect>Link 2</a></li>
-            </ul>
-          </mdb-accordion-item-body>
-        </mdb-accordion-item>
-
-        <!-- Simple link -->
-        <mdb-accordion-item class="no-collase">
-          <mdb-accordion-item-head mdbWavesEffect><mdb-icon far icon="gem"></mdb-icon> Simple link 2</mdb-accordion-item-head>
-          <mdb-accordion-item-body></mdb-accordion-item-body>
-        </mdb-accordion-item>
-
-      </mdb-accordion>
-    </ul>
-  </li>
-  <!--/. Side navigation links -->
-  <div class="sidenav-bg mask-strong"></div>
-</mdb-side-nav>
-<!--/. Sidebar navigation -->
-
+<div *ngIf="user">{{user.NIC}}</div>
+<div *ngIf="!user">2</div> -->
