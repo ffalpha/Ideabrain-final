@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HomeComponent } from './home/home.component';
-import { QahomeComponent } from './qahome/qahome.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    QahomeComponent
+   
   ],
   imports: [
     BrowserModule,
